@@ -1,0 +1,108 @@
+% !TeX root = ./main.tex
+
+\input{basic_settings}
+
+%% ========================================================================
+%%%% Document metadata
+%% ========================================================================
+
+%% general metadata:
+\newcommand{\myauthor}{AUTHOR}  %% also used for PDF metadata (hyperref)
+\newcommand{\mytitle}{Zukunft Biene 2 – Grundlagenforschungsprojekt zur Förderung des Bienenschutzes und der Bienengesundheit}  %% also used for PDF metadata (hyperref)
+\newcommand{\mysubtitle}{Zukunft Biene 2}
+\newcommand{\mysubject}{3. Zwischenbericht}  %% also used for PDF metadata (hyperref)
+\newcommand{\mykeywords}{Biene, Zukunft Biene, Forschung}  %% also used for PDF metadata (hyperref)
+
+%% this information is used only for generating the title page:
+\newcommand{\mydeadlinedate}{1. September 2020} %% deadline for title page
+\newcommand{\mysubmissiondate}{XX.XXXX 2020} %% submission date
+\newcommand{\myprojectnumber}{101295} %% project number
+
+%% ========================================================================
+%%%% MISC command definitions
+%% ========================================================================
+\input{template/mycommands}
+
+%% ========================================================================
+%%%% Typographic settings
+%% ========================================================================
+\input{template/typographic_settings}
+
+
+%% ========================================================================
+%%%% Templates
+%% ========================================================================
+
+%% template for inserting figures:
+% \myfig{}%% filename
+%       {}%% width/height
+%       {}%% caption
+%       {}%% optional (short) caption for list of figures
+%       {fig:}%% label
+
+%% acronyms in small caps: \myacro{UNESCO}
+
+
+
+\input{template/pdf_settings}  %% should be *last* definitions in preamble!
+
+% Easier Referenz Package, must be loaded after hyperref in pdf_settings!
+\usepackage[\mycitelanguage, noabbrev]{cleveref} 
+
+%% ========================================================================
+%%%% begin{document}
+%% ========================================================================
+
+\input{template/header}         %% include custom header definition
+\BeforeStartingTOC{\thispagestyle{scrheadings}}% pagestyle scrheadings on first page in TOC, LOF and LOT
+\renewcommand*\chapterpagestyle{scrheadings}
+
+\DeclareTOCStyleEntry[indent=0pt]{tocline}{section}
+\DeclareTOCStyleEntry[indent=0pt]{tocline}{subsection}
+\DeclareTOCStyleEntry[indent=0pt]{tocline}{subsubsection}
+\DeclareTOCStyleEntry[indent=0pt]{tocline}{subsubsubsection}
+
+\begin{document}
+
+\frontmatter                    %% KOMA: roman page numbers and such; only available in scrbook
+
+\input{\mytitlepage}
+%% include front information pages
+\include{frontpages/contact}
+
+%% include the abstract without chapter number but include it on table of contents:
+%\cleardoublepage
+\include{frontpages/authors}
+\include{frontpages/finance}
+%\addcontentsline{toc}{chapter}{Abstract}
+%\include{abstract}       
+
+\tableofcontents    
+%\listoffigures
+
+%% if myaddlistoftodos is set to "true", the current list of open todos is added:
+%\ifthenelse{\boolean{myaddlistoftodos}}{
+%  \newpage\listoftodos          %% handy if you are using todonotes with \todo{}
+%}{}                             %% with todonotes-package option "disable" you can get rid of any todo in the output
+
+\input{intro/intro}
+
+\mainmatter                     %% KOMA: marks main part using arabic page numbers and such; only available in scrbook
+
+\include{summary/summary}
+\include{project-U-wintersterblichkeit/chapter}
+\include{project-A-virenmonitoring/chapter}
+\include{project-V-virendiagnostik/chapter}
+
+
+\include{frontpages/publications}
+
+
+%\appendix                       %% closes main document, appendix follows until end; only available in book-classes
+%\addpart*{Appendix}             %% adding Appendix to tableofcontents
+
+\printbibliography              %% remove, if using BibTeX instead of biblatex
+% \include{further_ressources}  %% this is a suggestion: you have to create this file on demand
+
+
+\end{document}

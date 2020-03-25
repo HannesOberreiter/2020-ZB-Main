@@ -1,0 +1,6 @@
+{
+    "cSpell.language": ",de",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux","*.bcf", "*.run.xml", "*.synctex.gz","*.log", "*.out", "*.fls", "*.fdb_latexmk", "*.blg", "*.bbl", "*.toc",
+        "*/*.aux", "*/*.bcf", "*/*.run.xml", "*/*.synctex.gz"]
+}

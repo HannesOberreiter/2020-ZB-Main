@@ -1,0 +1,49 @@
+% In diesen Datei werden die Haupt Sektionen der Projekte Geschrieben. Jede Sektion hat eine eigene Datei erhalten welche im Chapter.tex zusammengeführt wird. Mit dem Prozentzeichen % können Notizen geschrieben werden die nicht im PDF aufscheinen. Der Befehl \blindtext kann gelöscht werden, er erstellt nur einen Muster Text
+
+% Hauptüberschrift
+\section{Zusammenfassung der Untersuchung der Wintersterblichkeit 2019/20}
+
+% Unterüberschrift
+\subsection{Muster Unterüberschrift}
+
+Muster Zeilenumbruch \\ Umbruch.
+
+Muster Referenz \citep{morawetzHealthStatusHoney2019}.
+
+%% Es können so auch PDF Grafiken eingebunden werden
+Muster Grafik
+\myfig{figures/logos/zukunft_biene_logo_rechteck} % Pfad
+  {width=0.1\textwidth} % Größe Relativ zu Text Breite
+  {Text unterhalb der Grafik.} % Text unterhalb der Grafik
+  {Optionaler Kurz Titel} % Optional Kurz Überschrift
+  {fig:example2} % Label zum Verweisen im Text
+  
+Zum Verweis auf die Grafik (\cref{fig:example2})
+  
+Muster Tabelle:
+
+\begin{table}[htp]
+    \centering
+    \begin{tabular}{|l|r|} 
+      \hline
+      Spalte1 & Spalte2 \\
+      \hline
+      Erste Zelle & Zweite Zelle \\
+      \hline
+      Dritte Zelle & Vierte Zelle \\
+      \hline
+    \end{tabular}
+    \caption{Table to test captions and labels}
+    \label{tab:example2}
+\end{table}
+
+Verschiedene Typographien: \textbf{ich bin ein fetter Text}, \textit{ich bin ein kursiver Text}
+
+Prozent schreiben: 90\%
+
+Sample: \sample{10}
+
+Confidenz Intervall: \confi{11.3}{98}{9.2}{12.0} % MW, Intervall, Lower, Upper 
+
+Confidenz Intervall ohne Befehl: 11\% (95\%~KI:~9.2-12.0\%)
+
