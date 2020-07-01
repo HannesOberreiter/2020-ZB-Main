@@ -27,7 +27,7 @@
 %       {}%% caption
 %       {}%% optional (short) caption for list of figures
 %       {}%% label
-\begin{figure}[htp]
+\begin{figure}[H]
   \centering
   \includegraphics[keepaspectratio,#2]{#1}
   \caption[#4]{#3}
@@ -71,11 +71,7 @@
 }
 
 %% Sample Text
-\newcommand{\sample}[1]{
-    \textit{n}~=~{#1}
-}
+\newcommand{\sample}[1]{\textit{n}~=~{#1}}
 
 %% 95% CI Intervall
-\newcommand{\confi}[4]{
-    {#1}\% ({#2}\%~KI:~{#3}-{#4}\%)
-}
+\newcommand{\confi}[4]{{#1}\% ({#2}\%~KI:~{#3}-{#4}\%)}

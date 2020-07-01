@@ -66,6 +66,10 @@ BCOR=\myBCOR,        %% binding correction (depends on how you bind
 %doc%
 \usepackage[\mylanguage]{babel}  %% used languages; default language is *last* language of options
 
+%% improved german hyphen breaks
+\usepackage[ngerman=ngerman-x-latest]{hyphsubst}
+
+
 %doc%
 %doc% \subsection{\texttt{scrlayer-scrpage}: Headers and footers}
 %doc%
@@ -151,8 +155,10 @@ style=\mybiblatexstyle, %% see biblatex documentation
 %style=alphabetic, %% see biblatex documentation
 dashed=\mybiblatexdashed, %% do *not* replace recurring reference authors with a dash
 backref=\mybiblatexbackref, %% create backlings from references to citations
+uniquelist=false,
 natbib=true, %% offering natbib-compatible commands
 hyperref=true, %% using hyperref-package references
+sorting=ynt, sortcites %% sort multiple cites by date
 ]{biblatex}  %% remove, if using BibTeX instead of biblatex
 
 \addbibresource{\mybiblatexfile} %% remove, if using BibTeX instead of biblatex
@@ -282,11 +288,18 @@ hyperref=true, %% using hyperref-package references
 %disabled% %% \Blinddocument creates a large document with sections, lists...
 %% 2012-03-10: vk: author published a corrected version which is able to handle "american english" as well. Did not have time to check new package version for this template here.
 
-%doc% \item[\texttt{\href{http://ctan.org/tex-archive/macros/latex/contrib/units}{%%
-%doc% units%%
-%doc% }}]
-%doc% For setting correctly typesetted units and nice fractions with \verb+\unit[42]{m}+ and \verb+\unitfrac[100]{km}{h}+.
-\usepackage{units}
-
 % Better Tabular Tables \tabularx{}
 \usepackage{tabularx}
+% inside table to make linebreaks with makecell and also multirows and collumns
+\usepackage{multirow, multicol, makecell}
+
+% Allows us to supress floating enviroments 
+% https://tex.stackexchange.com/a/9486/167781
+\usepackage{float}
+
+% landscape mode
+\usepackage{pdflscape}
+
+% special math equations and SI units
+\usepackage{amsmath}
+\usepackage{siunitx}
