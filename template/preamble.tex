@@ -19,8 +19,6 @@ BCOR=\myBCOR,        %% binding correction (depends on how you bind
             %% CAUTION: If documentclass will be changed, *many* other things
             %%          change as well like heading structure, ...
 
-
-
 % FIXXME: adopting class usage:
 % from scrbook -> scrartcl OR scrreport:
 % - remove appendixprefix from class options
@@ -68,6 +66,9 @@ BCOR=\myBCOR,        %% binding correction (depends on how you bind
 
 %% improved german hyphen breaks
 \usepackage[ngerman=ngerman-x-latest]{hyphsubst}
+
+% allow breaks after "-" in URLs
+\usepackage[hyphens]{url}
 
 
 %doc%
@@ -303,3 +304,4 @@ sorting=ynt, sortcites %% sort multiple cites by date
 % special math equations and SI units
 \usepackage{amsmath}
 \usepackage{siunitx}
+
