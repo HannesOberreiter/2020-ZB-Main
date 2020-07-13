@@ -1,3 +1,6 @@
+## Build files from local VS Code
+main.*
+
 template/auto/*
 20*pdf
 *.aux
