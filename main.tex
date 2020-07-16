@@ -2,6 +2,12 @@
 
 \input{basic_settings}
 
+\addbibresource{\mybiblatexfile} %% remove, if using BibTeX instead of biblatex
+\addbibresource{\mybiblatexfileU} %% remove, if using BibTeX instead of biblatex
+\addbibresource{\mybiblatexfileA} %% remove, if using BibTeX instead of biblatex
+\addbibresource{\mybiblatexfileV} %% remove, if using BibTeX instead of biblatex
+
+
 %% ========================================================================
 %%%% Document metadata
 %% ========================================================================
@@ -15,7 +21,7 @@
 
 %% this information is used only for generating the title page:
 \newcommand{\mydeadlinedate}{1. September 2020} %% deadline for title page
-\newcommand{\mysubmissiondate}{XX.XXXX 2020} %% submission date
+\newcommand{\mysubmissiondate}{20. Juli 2020} %% submission date
 \newcommand{\myprojectnumber}{101295} %% project number
 
 %% ========================================================================
@@ -52,7 +58,6 @@
 %% ========================================================================
 %%%% begin{document}
 %% ========================================================================
-
 \input{template/header}         %% include custom header definition
 \BeforeStartingTOC{\thispagestyle{scrheadings}}% pagestyle scrheadings on first page in TOC, LOF and LOT
 \renewcommand*\chapterpagestyle{scrheadings}
@@ -90,12 +95,14 @@
 \mainmatter                     %% KOMA: marks main part using arabic page numbers and such; only available in scrbook
 
 \include{summary/summary}
+\renewcommand{\cheadmark}{\headmark}
 \include{project-U-wintersterblichkeit/chapter}
 \include{project-A-virenmonitoring/chapter}
 \include{project-V-virendiagnostik/chapter}
 
-
+\renewcommand{\cheadmark}{Veröffentlichungen und Vorträge}
 \include{frontpages/publications}
+\renewcommand{\cheadmark}{\headmark}
 
 
 %\appendix                       %% closes main document, appendix follows until end; only available in book-classes
