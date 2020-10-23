@@ -1,0 +1,19 @@
+\begin{table}[H]
+    \caption{Stacking Modelle: Einfluss auf die Wintersterblichkeit von Bienenvölkern. Es wurden das Random Forest-Modell (\cref{fig:q:WV_RF_significance}) und die logistische Regression (\cref{tab:m:regression}) gestackt.}
+    \centering
+    %\setlength{\tabcolsep}{0.2em} % for the horizontal padding
+    \label{tab:o:stacking}
+    \begin{tabular}{l|rr}
+    \toprule
+        \multirow{2}{*}{\shortstack{Meta-Learner}} & 
+        \multirow{2}{*}{\shortstack{Koeffizient \\ Random Forest}} & 
+        \multirow{2}{*}{\shortstack{Koeffizient \\ Log. Regression}} \\
+        & & \\
+        %& Koeffizient   & Koeffizient \\
+        %Meta-Learner  & Random Forest & Log. Regression \\
+    \midrule
+        Breiman             & 0,499     & 0,501 \\ 
+        Ridge Regression    & 0,440     & 0,480 \\
+    \bottomrule
+    \end{tabular}
+\end{table}

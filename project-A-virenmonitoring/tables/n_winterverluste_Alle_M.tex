@@ -1,0 +1,18 @@
+\begin{table}[H]
+    \caption{Vergleich der unterschiedlichen Modelle hinsichtlich ihrer Vorhersagekraft mittels Kreuzvalidierung. Der Trainingsdatensatz bestand aus 75\% der Daten, der Testdatensatz aus 25\% der Daten. RMSE =  Root-Mean-Square-Error (~durchschnittlicher Vorhersagefehler).}
+    \centering
+    %\setlength{\tabcolsep}{0.2em} % for the horizontal padding
+    \label{tab:n:Mcomparison}
+    \begin{tabular}{l|rr}
+        \toprule
+        Modell  & Trainings-RMSE & Test-RMSE \\
+        \midrule
+        Basismodell                     & 0,209     & 0,240 \\ 
+        Regression Tree                 & 0,168     & 0,240\\ 
+        Random Forest                   & 0,174     & 0,214\\ 
+        Logistische Regression          & 0,194     & 0,228\\ 
+        Stacking nach Breiman           & 0,198     & 0,219\\ 
+        Stacking mit Ridge Regression   & 0,198     & 0,220\\ 
+        \bottomrule
+    \end{tabular}
+\end{table}

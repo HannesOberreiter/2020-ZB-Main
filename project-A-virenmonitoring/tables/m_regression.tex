@@ -1,0 +1,21 @@
+\begin{table}[htb]
+    \caption{Multivariates Modell (GLM mit quasibinomialer Verteilung): Einfluss auf die Wintersterblichkeit von Bienenvölkern. Drei Prädiktoren enthalten: Virustiter von DWV-B im September vor der Einwinterung (Vergleichskategorie: negativ, K = Konzentration), Symptom \enquote{Varroamilben auf Bienen} im September gesehen (Vergleichskategorie: Symptom nicht gesehen) und Gesamtanzahl der Völker des Imkereibetriebes (Anzahl Völker). n=390 Proben.}
+    \centering
+    %\setlength{\tabcolsep}{0.2em} % for the horizontal padding
+    \label{tab:m:regression}
+    \begin{tabular}{l|rrr}
+        \toprule
+        Prädiktor & Schätzer & Standardfehler & P-Wert \\
+        \midrule
+        DWV-B geringe K     & -0,039  & 0,360    & 0,913  \\ 
+        DWV-B mittlere K    & 0,502   & 0,337    & 0,137\\ 
+        DWV-B hohe K        & 1.204   & 0,355    & <0,001\\ 
+        \midrule
+        Varroa - gesehen        & 0,680 & 0,212 & 0,001 \\
+        Varroa - keine Angabe   & 0,057 & 0,317 & 0,858 \\
+        \midrule
+        Anzahl Völker           & -0,003    & 0,002     & 0,050 \\
+        \bottomrule
+    \end{tabular}
+
+\end{table}
