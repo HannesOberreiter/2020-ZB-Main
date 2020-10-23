@@ -2,6 +2,10 @@
 
 Dieser Bericht wird innerhalb des Projektes Zukunft Biene veröffentlicht. Das Repo stellt eine Work-In-Progress dar und ist nicht für Veröffentlichung gedacht. Auswertungen, Argumente etc. können noch angepasst bzw. verändert werden. In dieser Repo werden alle LaTeX Dokumente der Unterschiedlichen Arbeitsgruppen verknüpft für einen gemeinsamen Export.
 
+## Overleaf
+
+Die Arbeitsgruppen arbeiten mit [Overleaf](https://www.overleaf.com/), was eine Erleichterung im LaTeX Workflow ist. Dank Overleaf können auch mehrere Personen in Echtzeit an den Dokumenten Arbeiten. 
+
 ## LaTeX-Template
 
 ### Dokumentation
